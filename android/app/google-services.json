@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1087484133502",
+    "project_id": "dvote-8e5f7",
+    "storage_bucket": "dvote-8e5f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087484133502:android:6f50a9a454158a7716982f",
+        "android_client_info": {
+          "package_name": "com.dvote"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV_jsWEoCHraflXnv1UM_y86L473Sg_dI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
