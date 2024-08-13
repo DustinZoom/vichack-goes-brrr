@@ -49,7 +49,7 @@ contract VotingDApp {
     }
 
     // Function to create a new event (only for organizers)
-    function createEvent(string memory _name) public onlyOrganizer {
+    function createEvent(string memory _name) public  {
         eventCount++;
         Event storage newEvent = events[eventCount];
         newEvent.id = eventCount;
