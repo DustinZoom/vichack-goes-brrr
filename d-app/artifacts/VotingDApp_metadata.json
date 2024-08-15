@@ -13,24 +13,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_user",
-						"type": "address"
-					},
-					{
-						"internalType": "enum VotingDApp.Role",
-						"name": "_role",
-						"type": "uint8"
-					}
-				],
-				"name": "assignRole",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "string",
 						"name": "_name",
 						"type": "string"
@@ -88,24 +70,87 @@
 						"type": "string"
 					},
 					{
+						"internalType": "uint256",
+						"name": "totalVotes",
+						"type": "uint256"
+					},
+					{
 						"internalType": "bool",
 						"name": "active",
 						"type": "bool"
 					},
 					{
 						"internalType": "uint256",
-						"name": "yesVotes",
+						"name": "vote1",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "noVotes",
+						"name": "vote2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vote3",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vote4",
 						"type": "uint256"
 					},
 					{
 						"internalType": "address",
 						"name": "organizer",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllEvents",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					},
+					{
+						"internalType": "bool[]",
+						"name": "",
+						"type": "bool[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
 					}
 				],
 				"stateMutability": "view",
@@ -135,25 +180,29 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "roles",
+				"inputs": [],
+				"name": "getTop5EventIds",
 				"outputs": [
 					{
-						"internalType": "enum VotingDApp.Role",
+						"internalType": "uint256[]",
 						"name": "",
-						"type": "uint8"
+						"type": "uint256[]"
 					}
 				],
 				"stateMutability": "view",
@@ -167,9 +216,9 @@
 						"type": "uint256"
 					},
 					{
-						"internalType": "bool",
-						"name": "_voteYes",
-						"type": "bool"
+						"internalType": "uint256",
+						"name": "_optionIndex",
+						"type": "uint256"
 					}
 				],
 				"name": "vote",
@@ -193,7 +242,7 @@
 		"compilationTarget": {
 			"d-app/Voting.sol": "VotingDApp"
 		},
-		"evmVersion": "london",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -206,11 +255,11 @@
 	},
 	"sources": {
 		"d-app/Voting.sol": {
-			"keccak256": "0xe1fd916ae97035470b06d6d25c296ee11af0e7bc2416dcf30b8006bfcd58c22c",
+			"keccak256": "0xba45e5caa5abd18a6e6e4d7a302eefcb0ee67e3acc67a9044bbd89a8e3b7391c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7fba3eeb03b0bc808b254f0556fe18bcdf6c3d591f1035adce96deefd0debea6",
-				"dweb:/ipfs/QmNfWf9qBDTg5r1PymiRvzpjzWgTtingySVzFT9s8aNMBj"
+				"bzz-raw://a2cfda055bf6c6115bc88e45a3c69bdbcfb871fad5c335feef4dc7112e4185f6",
+				"dweb:/ipfs/QmNpxZYEtjU4PkBhSwBvk6fc4hqdW3KTH9KrKvSzB2sBHz"
 			]
 		}
 	},
