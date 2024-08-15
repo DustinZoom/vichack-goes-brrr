@@ -7,6 +7,7 @@ contract VotingDApp {
     struct Event {
         uint id;
         string name;
+        string description; // New attribute for event description
         uint totalVotes; // Total number of votes for the event
         bool active;
         uint vote1; // Votes for option 1
@@ -23,25 +24,43 @@ contract VotingDApp {
     // Counter for event IDs
     uint public eventCount;
 
-    // Function to create a new event (anyone can create an event)
-    function createEvent(string memory _name) public {
+     // Internal function to create an event with predefined votes and description
+    function createEventWithVotes(string memory _name, string memory _description, uint _vote1, uint _vote2, uint _vote3, uint _vote4) internal {
         eventCount++;
         Event storage newEvent = events[eventCount];
         newEvent.id = eventCount;
         newEvent.name = _name;
+        newEvent.description = _description; // Setting the description
+        newEvent.active = true;
+        newEvent.organizer = msg.sender;
+        newEvent.vote1 = _vote1;
+        newEvent.vote2 = _vote2;
+        newEvent.vote3 = _vote3;
+        newEvent.vote4 = _vote4;
+        newEvent.totalVotes = _vote1 + _vote2 + _vote3 + _vote4;
+    }
+
+    // Function to create a new event (anyone can create an event)
+    function createEvent(string memory _name, string memory _description) public {
+        eventCount++;
+        Event storage newEvent = events[eventCount];
+        newEvent.id = eventCount;
+        newEvent.name = _name;
+        newEvent.description = _description; // Setting the description
         newEvent.active = true;
         newEvent.organizer = msg.sender;
     }
 
-   constructor() {
-        createEvent("The Great Cookie Debate");
-        createEvent("Dance-Off at the Office");
-        createEvent("Battle of the Couch Potatoes");
-        createEvent("Pajama Fashion Showdown");
-        createEvent("The Epic Paper Airplane Contest");
+
+   // Constructor to create 5 premade events with descriptions and random votes when the contract is deployed
+    constructor() {
+        createEventWithVotes("The Great Cookie Debate", "A heated debate over the best cookie.", 1, 10, 3, 2);
+        createEventWithVotes("Dance-Off at the Office", "A fun dance competition at work.", 8, 1, 4, 0);
+        createEventWithVotes("Battle of the Couch Potatoes", "Who's the ultimate couch potato?", 2, 1, 9, 3);
+        createEventWithVotes("Pajama Fashion Showdown", "Show off your best pajamas!", 0, 1, 5, 8);
+        createEventWithVotes("The Epic Paper Airplane Contest", "Who can fly the furthest?", 4, 3, 2, 4);
     }
-
-
+    
 
     // Function to vote for an event (anyone can vote)
     // _optionIndex should be between 0 and 3
@@ -79,10 +98,10 @@ contract VotingDApp {
     }
 
     // Function to return details of all events
-    function getAllEvents() public view returns (uint[] memory, string[] memory, bool[] memory,uint[] memory, uint[] memory, uint[] memory, uint[] memory, uint[] memory) {   
+function getAllEvents() public view returns (uint[] memory, string[] memory, string[] memory, uint[] memory, uint[] memory, uint[] memory, uint[] memory, uint[] memory) {   
     uint[] memory ids = new uint[](eventCount);
     string[] memory names = new string[](eventCount);
-    bool[] memory actives = new bool[](eventCount);
+    string[] memory descriptions = new string[](eventCount); // Array for descriptions
     uint[] memory vote1s = new uint[](eventCount);
     uint[] memory vote2s = new uint[](eventCount);
     uint[] memory vote3s = new uint[](eventCount);
@@ -93,7 +112,7 @@ contract VotingDApp {
         Event storage eventInstance = events[i];
         ids[i-1] = eventInstance.id;
         names[i-1] = eventInstance.name;
-        actives[i-1] = eventInstance.active;
+        descriptions[i-1] = eventInstance.description; // Include description
         vote1s[i-1] = eventInstance.vote1;
         vote2s[i-1] = eventInstance.vote2;
         vote3s[i-1] = eventInstance.vote3;
@@ -101,8 +120,11 @@ contract VotingDApp {
         totalVotes[i-1] = eventInstance.totalVotes;
     }
 
-    return (ids, names, actives, vote1s, vote2s, vote3s, vote4s, totalVotes);
+    return (ids, names, descriptions, vote1s, vote2s, vote3s, vote4s, totalVotes);
 }
+
+
+
 
 
 function getTop5EventIds() public view returns (uint[] memory) {

@@ -16,6 +16,11 @@
 						"internalType": "string",
 						"name": "_name",
 						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
 					}
 				],
 				"name": "createEvent",
@@ -67,6 +72,11 @@
 					{
 						"internalType": "string",
 						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
 						"type": "string"
 					},
 					{
@@ -123,9 +133,9 @@
 						"type": "string[]"
 					},
 					{
-						"internalType": "bool[]",
+						"internalType": "string[]",
 						"name": "",
-						"type": "bool[]"
+						"type": "string[]"
 					},
 					{
 						"internalType": "uint256[]",
@@ -255,11 +265,11 @@
 	},
 	"sources": {
 		"d-app/Voting.sol": {
-			"keccak256": "0xba45e5caa5abd18a6e6e4d7a302eefcb0ee67e3acc67a9044bbd89a8e3b7391c",
+			"keccak256": "0x9409c62f6ac5e476d268cf0d80176089924578cdd1f48577e6d348a67f6ef61e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a2cfda055bf6c6115bc88e45a3c69bdbcfb871fad5c335feef4dc7112e4185f6",
-				"dweb:/ipfs/QmNpxZYEtjU4PkBhSwBvk6fc4hqdW3KTH9KrKvSzB2sBHz"
+				"bzz-raw://6381c39dacf32a07e29a58658204729ea90faeeb545a5ed6f848c3f594054a26",
+				"dweb:/ipfs/QmaqjNvvJbFinqAastXDcupq3d1uxdmKBWbmPBWKmQVRsR"
 			]
 		}
 	},
