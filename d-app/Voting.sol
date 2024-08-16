@@ -77,10 +77,11 @@ contract VotingDApp {
     }
 
     // Function to get the results of an event
-    function getResults(uint _eventId) public view returns (string memory, uint[4] memory) {
-        Event storage eventInstance = events[_eventId];
-        return (eventInstance.name, eventInstance.voteOptions);
-    }
+  function getResults(uint _eventId) public view returns (string memory, string memory, uint[4] memory, uint) {
+    Event storage eventInstance = events[_eventId];
+    return (eventInstance.name, eventInstance.description, eventInstance.voteOptions, eventInstance.totalVotes);
+}
+
 
     // Function to return details of all events
     function getAllEvents() public view returns (uint[] memory, string[] memory, string[] memory, uint[4][] memory, uint[] memory) {   

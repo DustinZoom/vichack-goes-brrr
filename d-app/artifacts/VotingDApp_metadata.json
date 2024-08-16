@@ -179,9 +179,19 @@
 						"type": "string"
 					},
 					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256[4]",
 						"name": "",
 						"type": "uint256[4]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -265,11 +275,11 @@
 	},
 	"sources": {
 		"d-app/Voting.sol": {
-			"keccak256": "0x95db8556f9e9cc308cbb57f840a51d6f37bbd40d53183d99eb7319d00dad0a80",
+			"keccak256": "0x6483a9349974b9a4a901cfc273d23d1277c7d6fc76379e592fa79779dbf4fb0b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://00b16cc64e33971192bb508818c5630b5a4d9d9d110c3ad62749e6240ffd96d3",
-				"dweb:/ipfs/QmdpSnAdaoMhs3gswh9oF1jb7T2CoKwLGuNvYgAjgHnvba"
+				"bzz-raw://d01408af06b73690cf470aad2f406e4c0be67a6985a6ffb7e2827faf6a6620c6",
+				"dweb:/ipfs/QmcM76A8chFBmrRiXhFbGmbUkfuqQtdJ4ny7ga5334SMQ5"
 			]
 		}
 	},
