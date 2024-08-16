@@ -24,7 +24,13 @@
 					}
 				],
 				"name": "createEvent",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -90,26 +96,6 @@
 						"type": "bool"
 					},
 					{
-						"internalType": "uint256",
-						"name": "vote1",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "vote2",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "vote3",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "vote4",
-						"type": "uint256"
-					},
-					{
 						"internalType": "address",
 						"name": "organizer",
 						"type": "address"
@@ -138,25 +124,36 @@
 						"type": "string[]"
 					},
 					{
-						"internalType": "uint256[]",
+						"internalType": "uint256[4][]",
 						"name": "",
-						"type": "uint256[]"
+						"type": "uint256[4][]"
 					},
 					{
 						"internalType": "uint256[]",
 						"name": "",
 						"type": "uint256[]"
-					},
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLastEventId",
+				"outputs": [
 					{
-						"internalType": "uint256[]",
+						"internalType": "uint256",
 						"name": "",
-						"type": "uint256[]"
-					},
-					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
-					},
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getRecentEvents",
+				"outputs": [
 					{
 						"internalType": "uint256[]",
 						"name": "",
@@ -182,24 +179,9 @@
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "uint256[4]",
 						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"type": "uint256[4]"
 					}
 				],
 				"stateMutability": "view",
@@ -212,6 +194,24 @@
 					{
 						"internalType": "uint256[]",
 						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getUserEvents",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "createdEventIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "participatedEventIds",
 						"type": "uint256[]"
 					}
 				],
@@ -265,11 +265,11 @@
 	},
 	"sources": {
 		"d-app/Voting.sol": {
-			"keccak256": "0x9409c62f6ac5e476d268cf0d80176089924578cdd1f48577e6d348a67f6ef61e",
+			"keccak256": "0x95db8556f9e9cc308cbb57f840a51d6f37bbd40d53183d99eb7319d00dad0a80",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6381c39dacf32a07e29a58658204729ea90faeeb545a5ed6f848c3f594054a26",
-				"dweb:/ipfs/QmaqjNvvJbFinqAastXDcupq3d1uxdmKBWbmPBWKmQVRsR"
+				"bzz-raw://00b16cc64e33971192bb508818c5630b5a4d9d9d110c3ad62749e6240ffd96d3",
+				"dweb:/ipfs/QmdpSnAdaoMhs3gswh9oF1jb7T2CoKwLGuNvYgAjgHnvba"
 			]
 		}
 	},
