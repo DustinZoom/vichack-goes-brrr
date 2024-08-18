@@ -51,7 +51,7 @@ function App() {
           <Alert severity="error">Please connect your MetaMask wallet.</Alert>
         )}
         <nav>
-          <Link to="/">Home</Link> | <Link to="/recent-events">Recent Events</Link> | <Link to="/my-events">My Events</Link> | <Link to="/vote">Vote Now</Link> | <Link to="/event-details">Event Search</Link>
+          <Link to="/">Home</Link> | <Link to="/recent-events">Recent Events</Link>  | <Link to="/vote">Vote Now</Link> | <Link to="/event-details">Event Search</Link>
 
         </nav>
         <Routes>
