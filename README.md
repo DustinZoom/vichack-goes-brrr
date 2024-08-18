@@ -31,7 +31,10 @@ then: npm start
 
 ## node.js
 This node folder contains APIs generated for Flutterflow to use. However flutterflow didn't fully worked.
+Since it is not needed anymore. I didnt update this folder for a while, so it is most likely outdated(like the ABI doesn't match, the address doesn't match etc.)
+How it used to work is  terminal: node index.js, then use ngrok to forawrd localhost, and call the apis using json body if it is a post function, for get function, just call them. Below image
+is an example of all the api calls i generated.
 ![api calls](https://github.com/user-attachments/assets/ef5bc2ba-a626-4c48-a977-8e4af4a81154)
 
 ## flutterflow
-Our initial frontend choice, however, didn't work out.
+Our initial frontend choice, however, didn't work out. You login without details to play through.
