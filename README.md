@@ -31,6 +31,7 @@ then: npm start
 
 ## node.js
 This node folder contains APIs generated for Flutterflow to use. However flutterflow didn't fully worked.
+![api calls](https://github.com/user-attachments/assets/ef5bc2ba-a626-4c48-a977-8e4af4a81154)
 
 ## flutterflow
 Our initial frontend choice, however, didn't work out.
