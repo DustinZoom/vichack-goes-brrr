@@ -24,6 +24,10 @@ Note: u can switch accounts under environment on the left, remix will prepare lo
 
 ## react.js
 in the react folder, this is the frontend of our voting contract.
+How to make a server yourself(if you want to)
+terminal:
+cd C:\Users\test\Desktop\VICHACK\vichack-goes-brrr\react\my-dapp
+then: npm start
 
 ## node.js
 This node folder contains APIs generated for Flutterflow to use. However flutterflow didn't fully worked.
