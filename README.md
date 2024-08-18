@@ -1,7 +1,32 @@
-# Voting d-app
+# Dvote
+This is a voting d-app created for the Vichack hackathon blockchain stream.
+## Backend only testing
+How to test the contract on the backend?
 
-A new Flutter project.
+1. go to remix.ethereum.org
+2. pull the code from our GitHub repo
+3. Compile while selecting voting. sol in d-app folder
+4. go to deploy, select remix vm cancun, select voting d-app as a contract, and deploy
+(if this didn't work, choose remix vm London, also change the EVM version to London, this can be done by Solidity compiler-> advanced config=> EVM version)
+(also, try using an older compiler version, like 0.820)
 
-## Getting Started
+5. find our instance in Deployed/Unpinned Contracts, u can play around with it now.
+Note: u can switch accounts under environment on the left, remix will prepare lots of account
+6. the rest is intuitive
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+## Webpage testing
+
+1. go to   https://dvote.ngrok.app      (the server will only be on because this is a forwarding of mylocalhost, I will try my best to make it working from 8am to 11pm, but even u happen to find it closed, try another time)
+2. Install metamask extensions,create an account if haven't done so
+3. Go to chainlist website, search for Polygon zkEVM Cardona Testnet, click include testnet if it is not there, add it to metamasks.
+4. Use your metamask address to redeem some test tokens in https://faucet.polygon.technology/ . select the correct network and verify using discord.
+5. Refresh the page if u can't connect Metamask, now, u can finally start voting and creating events. Feel free to try it out.
+
+## react.js
+in the react folder, this is the frontend of our voting contract.
+
+## node.js
+This node folder contains APIs generated for Flutterflow to use. However flutterflow didn't fully worked.
+
+## flutterflow
+Our initial frontend choice, however, didn't work out.
